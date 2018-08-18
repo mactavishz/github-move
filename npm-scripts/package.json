@@ -1,0 +1,17 @@
+{
+  "name": "npm-package-demo",
+  "version": "1.0.0",
+  "description": "just a usage demo",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "echo 'NPM Scripts about to start !\n' && rm -rf ./snapshot.png",
+    "start": "node index.js",
+    "poststart": "mkdir -p ~/Desktop/snapshots/ && mv snapshot.png ~/Desktop/snapshots/spanshot_$(date +%Y%m%d%H%M%S).png"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prompts": "^0.1.8",
+    "puppeteer": "^1.3.0"
+  }
+}
